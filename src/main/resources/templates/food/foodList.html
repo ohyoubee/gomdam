@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--<th:block th:each="foodNameList : ${foodNameList}">-->
+<!--    <button type="button">-->
+<!--        <span th:text="${foodNameList.food_name}"></span>-->
+<!--    </button>-->
+<!--</th:block>-->
+<form action="/food/search" method="get">
+    <input type="text" required>
+    <input type="submit" value="검색">
+</form>
+<ul>
+   <li th:each="foodNameList : ${foodNameList}">
+       <th:block th:text="${foodNameList.food_name}"></th:block>
+   </li>
+</ul>
+
+</body>
+</html>

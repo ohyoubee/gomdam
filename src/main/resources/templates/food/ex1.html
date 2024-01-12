@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>음식 이름</th>
+                <th>칼로리</th>
+                <th>탄수화물</th>
+                <th>단백질</th>
+                <th>지방</th>
+                <th>포화지방</th>
+                <th>불포화지방</th>
+                <th>콜레스테롤</th>
+                <th>식이섬유</th>
+                <th>나트륨</th>
+                <th>칼륨</th>
+                <th>당</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="foodList : ${foodList}">
+                <td th:text="${foodList.food_name}"></td>
+                <td th:text="${foodList.food_kcal}"></td>
+                <td th:text="${foodList.food_carb}"></td>
+                <td th:text="${foodList.food_protein}"></td>
+                <td th:text="${foodList.food_fat}"></td>
+                <td th:text="${foodList.food_sat_fat}"></td>
+                <td th:text="${foodList.food_unsat_fat}"></td>
+                <td th:text="${foodList.food_chol}"></td>
+                <td th:text="${foodList.food_fiber}"></td>
+                <td th:text="${foodList.food_sodium}"></td>
+                <td th:text="${foodList.food_potassium}"></td>
+                <td th:text="${foodList.food_sugar}"></td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
