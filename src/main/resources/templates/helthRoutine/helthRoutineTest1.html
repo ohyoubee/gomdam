@@ -13,12 +13,14 @@
         <td>운동 종류</td>
         <td>세트수</td>
         <td>무게</td>
+        <td>세트x무게 중량</td>
         <td>저장날짜 및 시간</td>
         <tr th:each="routines : ${routines}">
             <td th:text="${routines.getId()}"></td>
             <td th:text="${routines.getExerciseType()}"></td>
             <td th:text="${routines.getSets()}"></td>
             <td th:text="${routines.getWeight()}"></td>
+            <td th:text="${routines.getWeightXsets}"><</td>
             <td th:text="${routines.getRecordDate()}"></td>
         </tr>
     </table>

@@ -12,7 +12,13 @@
 
 <form th:action="@{/helthjoin}" th:object="${healthRoutineDTO}" method="post">
     <!-- 폼 필드와 Thymeleaf의 th:field를 사용하여 데이터 바인딩 -->
-    운동종류 : <input type="text" th:field="*{exerciseType}"><br>
+    <label for="exerciseType">운동 종류:</label>
+    <select id="exerciseType" name="exerciseType" th:field="*{exerciseType}">
+        <option value="벤치프레스">벤치프레스</option>
+        <option value="인클라인 벤치프레스">인클라인 벤치프레스</option>
+        <option value="덤벨 프레스">덤벨 프레스</option>
+        <!-- 다른 운동 종류를 필요에 따라 추가 -->
+    </select>
     무게 : <input type="text" th:field="*{weight}"><br>
     세트 : <input type="text" th:field="*{sets}"><br>
 

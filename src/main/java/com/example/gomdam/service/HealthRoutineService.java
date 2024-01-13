@@ -28,7 +28,14 @@ public class HealthRoutineService {
         healthRoutine.setExerciseType(healthRoutineDTO.getExerciseType());
         healthRoutine.setWeight(healthRoutineDTO.getWeight());
         healthRoutine.setSets(healthRoutineDTO.getSets());
+        //Weight X Sets = 를 계산하는 코드
+        int weight = healthRoutineDTO.getWeight();
+        int sets = healthRoutineDTO.getSets();
+        int calculatedValue = weight * sets;
+        healthRoutine.setWeightXsets(calculatedValue); // "WeightSetsProduct"는 예시로 사용한 컬럼명
+
         healthRoutine.setRecordDate(healthRoutineDTO.getRecordDate());
+
 
         // 현재 날짜와 시간을 얻기
         LocalDateTime now = LocalDateTime.now();

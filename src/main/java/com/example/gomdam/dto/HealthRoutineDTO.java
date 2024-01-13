@@ -14,5 +14,6 @@ public class HealthRoutineDTO {
     private String exerciseType;
     private Integer weight;
     private Integer sets;
+    private Integer weightXsets;
     private LocalDate recordDate;
 }
