@@ -31,6 +31,10 @@ public class HealthRoutine {
     @Column(nullable = false)
     private Integer sets;
 
+    //무게 곱하기 세트수 를 나타내는 컬럼
+    @Column(nullable = false)
+    private Integer weightXsets;
+
     //저장날짜
     @Column //notnull은 조금 보고 추가할 예정.
     private LocalDate recordDate;

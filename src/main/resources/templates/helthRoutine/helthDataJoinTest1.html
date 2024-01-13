@@ -1,11 +1,22 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
 <body>
-헬스 리스트를 save 하는 기능 테스트 페이지
-<Hr>
+헬스 리스트를 저장 하는 기능 테스트 페이지
+<hr>
+<a href="mainTest">테스트 메인 이동</a>
+<hr>
+
+<form th:action="@{/helthjoin}" th:object="${healthRoutineDTO}" method="post">
+    <!-- 폼 필드와 Thymeleaf의 th:field를 사용하여 데이터 바인딩 -->
+    운동종류 : <input type="text" th:field="*{exerciseType}"><br>
+    무게 : <input type="text" th:field="*{weight}"><br>
+    세트 : <input type="text" th:field="*{sets}"><br>
+
+    <button type="submit">운동 기록 저장</button>
+</form>
 </body>
 </html>
