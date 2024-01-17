@@ -1,8 +1,12 @@
 package com.example.gomdam.controller;
 
+import com.example.gomdam.dto.UserDTO;
+import com.example.gomdam.entity.User;
 import com.example.gomdam.service.UserService;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
@@ -28,6 +32,16 @@ public class UserController {
         } else {
             return "index";
         }
+    }
+    @GetMapping("/joinPage")
+    public String joinPage(Model model){
+        model.addAttribute("userDTO",new User());
+    return "/login/userJoin";
+    }
+    @PostMapping("/joinPage")
+    public String joinProcess(@ModelAttribute UserDTO userDTO){
+        userService.insertUser(userDTO);
+        return "index";
     }
 
     @GetMapping("/home")
