@@ -26,11 +26,15 @@ public class UserController {
 
     @PostMapping("/loginPage")
     public String loginProcess(@RequestParam String userId, @RequestParam String password) {
-        String result = userService.loginProcess(userId, password);
-        if(result.equals("Success")) {
-            return "redirect:/home";
-        } else {
-            return "index";
+        try {
+            String result = userService.loginProcess(userId, password);
+            if (result.equals("Success")) {
+                return "redirect:/home";
+            } else {
+                return "error";
+            }
+        } catch(Exception e) {
+            return "error";
         }
     }
     @GetMapping("/joinPage")
