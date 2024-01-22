@@ -6,7 +6,7 @@ import lombok.Setter;
 import lombok.ToString;
 
 @Entity
-@Table(name= "food_nutrient")
+@Table(name= "food_Nutrient")
 @ToString
 @Getter
 @Setter
@@ -14,42 +14,42 @@ public class FoodNutrient {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer food_id;
+    private Integer foodId;
 
     @Column(length = 100, nullable = false)
-    private String food_name;
+    private String foodName;
 
-    @Column(nullable = true)
-    private Integer food_kcal;
+    @Column(nullable = true, name="foodKcal")
+    private Integer foodKcal;
 
-    @Column(nullable = true)
-    private Integer food_carb; // carbohydrate
+    @Column(nullable = true, name="foodCarb")
+    private Integer foodCarb; // carbohydrate
 
-    @Column(nullable = true)
-    private Integer food_protein;
+    @Column(nullable = true, name="foodProtein")
+    private Integer foodProtein;
 
-    @Column(nullable = true)
-    private Integer food_fat; // jibang
+    @Column(nullable = true, name="foodFat")
+    private Integer foodFat; // jibang
 
-    @Column(nullable = true)
-    private Integer food_sat_fat; // pohwajibang
+    @Column(nullable = true, name="foodSatFat")
+    private Integer foodSatFat; // pohwajibang
 
-    @Column(nullable = true)
-    private Integer food_unsat_fat; // bullbohwajibang
+    @Column(nullable = true, name="foodUnsatFat")
+    private Integer foodUnsatFat; // bullbohwajibang
 
-    @Column(nullable = true)
-    private Integer food_chol; // cholesterol
+    @Column(nullable = true, name="foodChol")
+    private Integer foodChol; // cholesterol
 
-    @Column(nullable = true)
-    private Integer food_fiber; // sikEseomyou
+    @Column(nullable = true, name="foodFiber")
+    private Integer foodFiber; // sikEseomyou
 
-    @Column(nullable = true)
-    private Integer food_sodium; // natrium
+    @Column(nullable = true, name="FoodSodium")
+    private Integer foodSodium; // natrium
 
-    @Column(nullable = true)
-    private Integer food_potassium; // kallium
+    @Column(nullable = true, name="foodPotassium")
+    private Integer foodPotassium; // kallium
 
-    @Column(nullable = true)
-    private Integer food_sugar;
+    @Column(nullable = true, name="foodSugar")
+    private Integer foodSugar;
 
 }

@@ -9,30 +9,30 @@ import lombok.ToString;
 @ToString
 public class FoodDTO {
 
-    private Integer food_id;
+    private Integer food_Id;
 
-    private String food_name;
+    private String food_Name;
 
-    private Integer food_kcal;
+    private Integer food_Kcal;
 
-    private Integer food_carb;
+    private Integer food_Carb;
 
-    private Integer food_protein;
+    private Integer food_Protein;
 
-    private Integer food_fat;
+    private Integer food_Fat;
 
-    private Integer food_sat_fat;
+    private Integer food_Sat_Fat;
 
-    private Integer food_unsat_fat;
+    private Integer food_Unsat_Fat;
 
-    private Integer food_chol;
+    private Integer food_Chol;
 
-    private Integer food_fiber;
+    private Integer food_Fiber;
 
-    private Integer food_sodium;
+    private Integer food_Sodium;
 
-    private Integer food_potassium;
+    private Integer food_Potassium;
 
-    private Integer food_sugar;
+    private Integer food_Sugar;
 
 }

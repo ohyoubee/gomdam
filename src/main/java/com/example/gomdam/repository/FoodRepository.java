@@ -7,4 +7,8 @@ import java.util.List;
 
 public interface FoodRepository extends JpaRepository<FoodNutrient, Integer> {
 
+    List<FoodNutrient> findByFoodNameContaining(String foodSearchName);
+
+    List<FoodNutrient> findByFoodId(int foodId);
+
 }
