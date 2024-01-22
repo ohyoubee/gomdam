@@ -11,14 +11,12 @@
 </form>
 
 <table border="1">
-    <tr th:each="foodNameList : ${foodNameList}">
-        <td>
-            <a th:href="@{'/food/foodDetail/' + ${foodNameList.foodId}}">
-            <th:block th:text="${foodNameList.foodName}"></th:block>
-            </a>
-        </td>
+    <tr th:each="result : ${result}">
+        <td><a th:href="@{'/food/foodDetail/' + ${result.foodId}}">
+            <th:block th:text="${result.foodName}"></th:block>
+        </a></td>
     </tr>
 </table>
-<a href="/"><input type="button" value="메인으로"></a>
+<a href="/food/foodList"><input type="button" value="전체 리스트로"></a>
 </body>
 </html>

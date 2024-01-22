@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table th:each="oneFood : ${oneFood}">
+    <thead>
+        <tr>
+            <td>음식 이름</td>
+            <td><th:block th:text="${oneFood.foodName}"></th:block></td>
+        </tr>
+        <tr>
+            <td>칼로리</td>
+            <td><th:block th:text="${oneFood.foodKcal}"></th:block></td>
+        </tr>
+        <tr>
+            <td>탄수화물</td>
+            <td><th:block th:text="${oneFood.foodCarb}"></th:block></td>
+        </tr>
+        <tr>
+            <td>단백질</td>
+            <td><th:block th:text="${oneFood.foodProtein}"></th:block></td>
+        </tr>
+        <tr>
+            <td>지방</td>
+            <td><th:block th:text="${oneFood.foodFat}"></th:block></td>
+        </tr>
+        <tr>
+            <td>포화지방</td>
+            <td><th:block th:text="${oneFood.foodSatFat}"></th:block></td>
+        </tr>
+        <tr>
+            <td>불포화지방</td>
+            <td><th:block th:text="${oneFood.foodUnsatFat}"></th:block></td>
+        </tr>
+        <tr>
+            <td>콜레스테롤</td>
+            <td><th:block th:text="${oneFood.foodChol}"></th:block></td>
+        </tr>
+        <tr>
+            <td>식이섬유</td>
+            <td><th:block th:text="${oneFood.foodFiber}"></th:block></td>
+        </tr>
+        <tr>
+            <td>나트륨</td>
+            <td><th:block th:text="${oneFood.foodSodium}"></th:block></td>
+        </tr>
+        <tr>
+            <td>칼륨</td>
+            <td><th:block th:text="${oneFood.foodPotassium}"></th:block></td>
+        </tr>
+        <tr>
+            <td>당</td>
+            <td><th:block th:text="${oneFood.foodSugar}"></th:block></td>
+        </tr>
+</table>
+<a href="javascript:history.back()"><input type="button" value="이전 페이지로"></a>
+</body>
+</html>
