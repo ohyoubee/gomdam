@@ -3,6 +3,9 @@ package com.example.gomdam.service;
 import com.example.gomdam.entity.FoodNutrient;
 import com.example.gomdam.repository.FoodRepository;
 import lombok.RequiredArgsConstructor;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -27,4 +30,5 @@ public class FoodService {
     public List<FoodNutrient> getOneFood(int foodId) {
         return foodRepository.findByFoodId(foodId);
     }
+
 }

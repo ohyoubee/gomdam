@@ -13,12 +13,37 @@
 <table border="1">
     <tr th:each="foodNameList : ${foodNameList}">
         <td>
+            <input type="checkbox" name="${foodNameList.foodName}">
             <a th:href="@{'/food/foodDetail/' + ${foodNameList.foodId}}">
             <th:block th:text="${foodNameList.foodName}"></th:block>
             </a>
         </td>
     </tr>
 </table>
+
+<!--<script>-->
+<!--    // 선택된 체크박스들의 값을 추출하는 함수-->
+<!--    function extractCheckboxValues() {-->
+<!--        var checkboxes = document.querySelectorAll('input[type="checkbox"]:checked');-->
+<!--        var values = [];-->
+
+<!--        checkboxes.forEach(function(checkbox) {-->
+<!--            values.push(checkbox.name);-->
+<!--        });-->
+
+<!--        return values;-->
+<!--    }-->
+
+<!--    // 추출된 값을 출력-->
+<!--    function showSelectedValues() {-->
+<!--        var selectedValues = extractCheckboxValues();-->
+<!--        console.log(selectedValues);-->
+<!--    }-->
+<!--</script>-->
+
+<!--<button onclick="showSelectedValues()">추출</button>-->
+
 <a href="/"><input type="button" value="메인으로"></a>
+
 </body>
 </html>
